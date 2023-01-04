@@ -20,5 +20,54 @@
         </ul>
     </div>
     <h1 class=" text-danger">This is service Page</h1>
+
+    @php
+        echo "hello World";
+    @endphp
+
+    {{ date("d/m/Y")}}
+    {{ date("d m Y")}}
+
+    @if (false)
+        <h1>This is false status</h1>
+        <h2>if</h2>
+    @elseif (false)
+        <h2>This is true status</h2>
+        <h3>Else if</h3>
+    @else
+        <h2> This is flase status </h2>
+        <h3>else</h3>
+    @endif
+
+    @foreach ($fruits as $fruit )
+        <h3>{{$fruit}}</h3>
+    @endforeach
+
+    @for ($i = 0; $i < count($fruits); $i++)
+        <h1 class="text-danger">This is {{$fruits[$i]}}</h1>
+    @endfor
+
+    @isset($name)
+        <h1 class="badge bg-info"> {{$name}} </h1>
+    @endisset
+
+
+    @switch($name)
+        @case("Kyaw Kyaw")
+            <h2 class="btn btn-success">{{$name}}</h2>
+            @break
+        @case("Tun Tun")
+            <h2 class="btn btn-primary">{{$name}}</h2>
+            @break
+        @default
+        <h1 class="btn btn-warning">empty</h1>
+    @endswitch
+
+    @for ($i=0; $i < 10; $i++)
+        <p>This is {{$i}}</p>
+    @endfor
+
+
+
 </body>
 </html>

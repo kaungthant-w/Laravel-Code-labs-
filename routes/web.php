@@ -23,7 +23,7 @@ Route::get('/home', function() {
 // Route::view('URI', 'VIEW', 'Parameter');
 Route::view('about', 'aboutPage',["message" => "This is testing message from server site", "num1" => 10, "num2" => 20]);
 
-Route::view("customer/help/service", 'service')->name("ser");
+Route::view("customer/help/service", 'service',["name" => "Tun Tun" ,"fruits" => ["apple", "orange", "mango", "lemon", 'watermelon']])->name("ser");
 
 Route::get("resultPage", function() {
     return view("result");
